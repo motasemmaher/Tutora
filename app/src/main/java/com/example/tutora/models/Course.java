@@ -28,7 +28,21 @@ public class Course extends SQLiteOpenHelper {
     public void cc(SQLiteDatabase db, int oldVersion, int newVersion) {
 
     }
-
+    public boolean x(String name,String category,String rate,String time,float price,String path){
+        SQLiteDatabase database = this.getWritableDatabase();
+        ContentValues content = new ContentValues();
+        content.put("name",name);
+        content.put("time",time);
+        content.put("category",category);
+        content.put("rate",rate);
+        content.put("price",price);
+        content.put("image",path);
+        if(database.insert("Course",null,content) != -1){
+            database.close();
+            return true;
+        }
+        return  false;
+    }
     public boolean insert(String name,String category,String rate,String time,float price,String path){
         SQLiteDatabase database = this.getWritableDatabase();
         ContentValues content = new ContentValues();
