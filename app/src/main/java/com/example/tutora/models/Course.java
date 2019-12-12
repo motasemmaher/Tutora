@@ -25,7 +25,9 @@ public class Course extends SQLiteOpenHelper {
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
 
     }
+    public void cc(SQLiteDatabase db, int oldVersion, int newVersion) {
 
+    }
 
     public boolean insert(String name,String category,String rate,String time,float price,String path){
         SQLiteDatabase database = this.getWritableDatabase();
