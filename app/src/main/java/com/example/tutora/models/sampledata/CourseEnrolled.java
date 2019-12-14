@@ -1,4 +1,4 @@
-package com.example.tutora.models;
+package com.example.tutora.models.sampledata;
 
 import android.content.ContentValues;
 import android.content.Context;
