@@ -7,25 +7,11 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 
-public class Student extends SQLiteOpenHelper {
+public class Student extends database {
     public static final String DATABASE_NAME = "Tutor.db";
 
     public Student(Context context) {
-        super(context, DATABASE_NAME, null, 1);
-    }
-
-
-    @Override
-    public void onCreate(SQLiteDatabase db) {
-        db.execSQL("create table Student(username text primary key,email text,password text,image text,courseEnrolledId integer,courseWatchLaterId integer,lessonWatachLater integer," +
-                "foreign key (courseEnrolledId) references CourseEnrolled(id)," +
-                "foreign key (courseWatchLaterId) references Course(id)," +
-                "foreign key (lessonWatachLater) references Lesson(id) )");
-    }
-
-    @Override
-    public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-
+        super(context);
     }
 
     public boolean insert(String username,String email,String password,String path){

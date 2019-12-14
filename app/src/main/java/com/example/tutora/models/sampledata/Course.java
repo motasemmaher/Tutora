@@ -8,25 +8,14 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 import androidx.annotation.Nullable;
 
-public class Course extends SQLiteOpenHelper {
-    public static final String DATABASE_NAME = "Tutor.db";
+public class Course extends database {
 
     public Course(Context context) {
-        super(context, DATABASE_NAME , null, 1);
+        super(context);
     }
 
-    @Override
-    public void onCreate(SQLiteDatabase db) {
-        db.execSQL("create table Course(id integer primary key autoincrement,name text,time text,category text,price DECIMAL(7,3),image text,rate text)");
 
-    }
-
-    @Override
-    public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-
-    }
-
-    public boolean insert(String name,String category,String rate,String time,float price,String path){
+    public boolean insert(String name, String category, int rate, String time, double price, int path){
         SQLiteDatabase database = this.getWritableDatabase();
         ContentValues content = new ContentValues();
         content.put("name",name);
