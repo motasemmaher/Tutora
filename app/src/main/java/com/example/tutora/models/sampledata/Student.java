@@ -36,7 +36,7 @@ public class Student extends database {
 
     public boolean isExist(String username,String password){
         SQLiteDatabase database = this.getReadableDatabase();
-        Cursor cursor = database.rawQuery("select username,password from Student where userame=? and password = ?",new String[]{username,password});
+        Cursor cursor = database.rawQuery("select username,password from Student where username=? and password = ?",new String[]{username,password});
         if(cursor.getCount() == 1){
             return  true;
         }

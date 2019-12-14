@@ -42,7 +42,7 @@
         android:src="@drawable/tutoralogo" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/user"
         android:layout_width="348dp"
         android:layout_height="52dp"
         android:layout_gravity="center"
@@ -55,7 +55,7 @@
         android:textSize="24sp" />
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/pass"
         android:layout_width="348dp"
         android:layout_height="52dp"
         android:layout_gravity="center"
@@ -78,7 +78,8 @@
         android:textSize="18sp" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/btnlogin"
+        style="@style/Widget.AppCompat.Button"
         android:layout_width="367dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -86,6 +87,7 @@
         android:background="@drawable/roundedblue"
         android:fontFamily="sans-serif"
         android:text="Login"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textColor="#FFFFFF"
         android:textSize="24sp"
         android:textStyle="bold" />
