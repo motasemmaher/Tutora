@@ -23,7 +23,8 @@
             android:layout_marginRight="15dp"
             android:layout_marginBottom="15dp"
             android:scaleType="centerInside"
-            android:src="@drawable/tutoralogo"/>
+            tools:src="@tools:sample/backgrounds/scenic[0]"
+            tools:srcCompat="@drawable/tutoraLogo" />
 
         <TextView
             android:id="@+id/textView"
