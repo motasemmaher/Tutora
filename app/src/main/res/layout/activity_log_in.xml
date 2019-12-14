@@ -1,75 +1,87 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout3"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/ima"
     android:orientation="vertical"
-    android:background="#1DFAD2"
-    tools:context=".landing" >
+    tools:context=".landing">
+
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="554dp"
-        android:background="@drawable/ima"
-        android:orientation="vertical">
+        android:layout_height="170dp"
+        android:background="#1DFAD2"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
-        <ImageView
-            android:id="@+id/imageView2"
-            android:layout_width="wrap_content"
-            android:layout_height="181dp"
-            android:layout_marginLeft="15dp"
-            android:layout_marginTop="30dp"
-            android:layout_marginRight="15dp"
-            android:layout_marginBottom="15dp"
-            android:scaleType="centerInside"
-            tools:src="@tools:sample/backgrounds/scenic[0]"
-            tools:srcCompat="@drawable/tutoraLogo" />
-
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="match_parent"
+        <Button
+            android:id="@+id/log"
+            android:layout_width="380dp"
             android:layout_height="wrap_content"
-            android:layout_margin="15dp"
-            android:text="The world’s largest selection of courses Choose from over 100,000 online video courses with new additions published every month"
-            android:textColor="#FFFFFF" />
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/roundedblue"
+            android:fontFamily="sans-serif"
+            android:text="Login"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:typeface="monospace" />
 
-        <ImageView
-            android:id="@+id/imageView4"
-            android:layout_width="match_parent"
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="380dp"
             android:layout_height="wrap_content"
-            android:layout_margin="15dp"
-            android:scaleType="fitXY"
-            tools:src="@tools:sample/backgrounds/scenic[2]" />
-
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/roundedwhite"
+            android:fontFamily="sans-serif"
+            android:text="Register"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:typeface="monospace" />
     </LinearLayout>
 
-    <Button
-        android:id="@+id/log"
-        android:layout_width="307dp"
+    <ImageView
+        android:src="@drawable/tutoralogo"
+        android:id="@+id/imageView2"
+        android:layout_width="380dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="32dp"
+        android:scaleType="centerInside"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@drawable/tutoralogo" />
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="380dp"
         android:layout_height="wrap_content"
-        android:layout_gravity="center|center_horizontal|center_vertical"
-        android:layout_margin="20dp"
-        android:background="@drawable/roundedblue"
-        android:fontFamily="sans-serif"
-        android:text="Login"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:layout_marginTop="16dp"
+        android:text="The world’s largest selection of courses Choose from over 100,000 online video courses with new additions published every month"
         android:textColor="#FFFFFF"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:typeface="monospace" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
-    <Button
-        android:id="@+id/button4"
-        android:layout_width="307dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:background="@drawable/roundedwhite"
-        android:fontFamily="sans-serif"
-        android:text="Register"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:typeface="monospace" />
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="380dp"
+        android:layout_height="258dp"
+        android:layout_marginTop="24dp"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        android:src="@drawable/java_logo" />
 
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
