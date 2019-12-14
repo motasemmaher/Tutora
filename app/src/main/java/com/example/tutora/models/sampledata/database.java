@@ -14,13 +14,11 @@ public class database extends SQLiteOpenHelper{
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL("create table Course(id integer primary key autoincrement,name text,time text,category text,price DECIMAL(7,3),image integer,rate integer)");
-      //  db.execSQL("create table CourseEnrolled (id integer primary key autoincrement, cousreId integer,completedLesson inegter, foreign key (courseId) references Course(id))");
-      //  db.execSQL("create table Login(username text primary key)");
-      //  db.execSQL("create table Student(username text primary key,email text,password text,image text,courseEnrolledId integer,courseWatchLaterId integer,lessonWatachLater integer," +
-               // "foreign key (courseEnrolledId) references CourseEnrolled(id)," +
-               // "foreign key (courseWatchLaterId) references Course(id)," +
-               // "foreign key (lessonWatachLater) references Lesson(id) )");
         db.execSQL("create table Lesson (id integer primary key autoincrement,name text,link text,courseId integer, time text, reference text,task text,image integer, foreign key (courseId) references Course(id) )");
+        db.execSQL("create table CourseEnrolled (id integer primary key autoincrement, courseId integer,completedLesson inegter, foreign key (courseId) references Course(id))");
+        db.execSQL("create table Student(username text primary key,email text,password text,image integer)");
+        db.execSQL("create table Login(username text primary key)");
+
     }
 
     @Override

@@ -4,12 +4,8 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-import android.database.sqlite.SQLiteOpenHelper;
-
-import androidx.annotation.Nullable;
 
 public class CourseEnrolled extends database {
-    public static final String DATABASE_NAME = "Tutor.db";
 
     public CourseEnrolled(Context context) {
         super(context);

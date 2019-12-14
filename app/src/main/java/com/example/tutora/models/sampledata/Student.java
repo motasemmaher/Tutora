@@ -4,26 +4,26 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-import android.database.sqlite.SQLiteOpenHelper;
+
 
 
 public class Student extends database {
-    public static final String DATABASE_NAME = "Tutor.db";
 
     public Student(Context context) {
         super(context);
     }
 
-    public boolean insert(String username,String email,String password,String path){
+    public boolean insert(String username,String email,String password,int path){
         SQLiteDatabase database = this.getWritableDatabase();
         ContentValues contentValues =  new ContentValues();
         contentValues.put("username",username);
         contentValues.put("email",email);
         contentValues.put("password",password);
-        contentValues.put("path",path);
+        contentValues.put("image",path);
         if (database.insert("Student",null,contentValues) != -1){
             return true;
         }
+
         return  false;
     }
 

@@ -3,21 +3,32 @@ package com.example.tutora;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
+import android.widget.Toast;
+
 import com.example.tutora.models.sampledata.Course;
+import com.example.tutora.models.sampledata.CourseEnrolled;
 import com.example.tutora.models.sampledata.Lesson;
+import com.example.tutora.models.sampledata.Student;
 import com.example.tutora.models.sampledata.database;
 
 public class MainActivity extends AppCompatActivity {
 
-    database data = new database(this);
 
     Course course = new Course(this);
     Lesson lesson = new Lesson(this);
+
+    Student courseEnrolled = new Student(this);
+    CourseEnrolled c = new CourseEnrolled(this);
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        //insert(String username,String email,String password,String path)
+
+
         //(String name, String category, int rate, String time, double price, int path)
         course.insert("C++","Programming",3,"35:01",100.00,R.drawable.cpp_logo);
         course.insert("Jave","Programming",4,"35:01",150.00,R.drawable.java_logo);
@@ -48,5 +59,14 @@ public class MainActivity extends AppCompatActivity {
         lesson.insert("Getting User Input", "https://www.youtube.com/watch?v=qgMH6jOOFOE&list=PLS1QulWo1RIbfTjQvTdj8Y6yyq4R7g-Al&index=5",
                 "12:10", 2, null,
                 null, R.drawable.java_logo);
+
+        if( c.insert(1)){
+            Toast.makeText(this,"done",Toast.LENGTH_LONG).show();
+        }
+
+        courseEnrolled.insert("motasemMaher","motasem@maher.salem","12345",R.drawable.account);
+      //
+
+
     }
 }
