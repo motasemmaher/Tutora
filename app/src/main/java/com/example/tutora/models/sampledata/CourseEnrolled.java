@@ -4,26 +4,13 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-import android.database.sqlite.SQLiteOpenHelper;
 
-import androidx.annotation.Nullable;
-
-public class CourseEnrolled extends SQLiteOpenHelper {
-    public static final String DATABASE_NAME = "Tutor.db";
+public class CourseEnrolled extends database {
 
     public CourseEnrolled(Context context) {
-        super(context, DATABASE_NAME, null, 1);
+        super(context);
     }
 
-    @Override
-    public void onCreate(SQLiteDatabase db) {
-        db.execSQL("create table CourseEnrolled (id integer primary key autoincrement, cousreId integer,completedLesson inegter, foreign key (courseId) references Course(id))");
-    }
-
-    @Override
-    public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-
-    }
 
     public boolean insert(int courseId){
         SQLiteDatabase database = this.getWritableDatabase();

@@ -4,40 +4,26 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-import android.database.sqlite.SQLiteOpenHelper;
 
 
-public class Student extends SQLiteOpenHelper {
-    public static final String DATABASE_NAME = "Tutor.db";
+
+public class Student extends database {
 
     public Student(Context context) {
-        super(context, DATABASE_NAME, null, 1);
+        super(context);
     }
 
-
-    @Override
-    public void onCreate(SQLiteDatabase db) {
-        db.execSQL("create table Student(username text primary key,email text,password text,image text,courseEnrolledId integer,courseWatchLaterId integer,lessonWatachLater integer," +
-                "foreign key (courseEnrolledId) references CourseEnrolled(id)," +
-                "foreign key (courseWatchLaterId) references Course(id)," +
-                "foreign key (lessonWatachLater) references Lesson(id) )");
-    }
-
-    @Override
-    public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-
-    }
-
-    public boolean insert(String username,String email,String password,String path){
+    public boolean insert(String username,String email,String password,int path){
         SQLiteDatabase database = this.getWritableDatabase();
         ContentValues contentValues =  new ContentValues();
         contentValues.put("username",username);
         contentValues.put("email",email);
         contentValues.put("password",password);
-        contentValues.put("path",path);
+        contentValues.put("image",path);
         if (database.insert("Student",null,contentValues) != -1){
             return true;
         }
+
         return  false;
     }
 
