@@ -33,7 +33,9 @@
             android:icon="@drawable/ic_supervisor_account"
             android:title="About us" />
         <item
+            android:id="@+id/zzzzzz"
             android:icon="@drawable/ic_exit"
+            android:onClick="exit"
             android:title="Logout" />
     </group>
 

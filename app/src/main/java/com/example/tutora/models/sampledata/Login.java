@@ -2,6 +2,7 @@ package com.example.tutora.models.sampledata;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
@@ -26,12 +27,21 @@ public class Login extends database {
         return false;
     }
 
-    public boolean delete(int id){
+    public boolean delete(){
         SQLiteDatabase database = this.getWritableDatabase();
-        if(database.delete("Login","id",new String[]{""+id}) != -1){
+        if(database.delete("Login",null,null) != -1){
             return  true;
         }
 
         return false;
+    }
+
+    public String getusername(){
+        SQLiteDatabase database = this.getWritableDatabase();
+        Cursor cursor = database.rawQuery("select username from Login",null);
+        if(cursor.moveToFirst()){
+            return cursor.getString(0);
+        }
+        return "";
     }
 }

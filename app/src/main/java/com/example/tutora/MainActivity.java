@@ -1,27 +1,27 @@
 package com.example.tutora;
 
+import android.content.Intent;
 import android.os.Bundle;
-
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
+import android.view.MenuItem;
+import com.*;
+import androidx.annotation.NonNull;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
-import com.example.tutora.ui.profile.fragment_profile;
+import com.example.tutora.models.sampledata.Login;
 import com.google.android.material.navigation.NavigationView;
-
 import androidx.drawerlayout.widget.DrawerLayout;
-
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
-import android.view.View;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity{
 
     private AppBarConfiguration mAppBarConfiguration;
+    String id;
+    Login login = new Login(getApplicationContext());
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,11 +33,13 @@ public class MainActivity extends AppCompatActivity {
         NavigationView navigationView = findViewById(R.id.nav_view);
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
+        id = login.getusername();
         mAppBarConfiguration = new AppBarConfiguration.Builder(
                 R.id.nav_profile, R.id.nav_home, R.id.nav_my_courses, R.id.nav_category,
                 R.id.nav_watch_later, R.id.nav_setting, R.id.nav_about_us)
                 .setDrawerLayout(drawer)
                 .build();
+
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
 
@@ -48,6 +50,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+
     @Override
     public boolean onSupportNavigateUp() {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
@@ -56,4 +59,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    public void exit(MenuItem item) {
+        Intent intent = new Intent(getApplicationContext(),login.class);
+        login.delete();
+        startActivity(intent);
+    }
 }

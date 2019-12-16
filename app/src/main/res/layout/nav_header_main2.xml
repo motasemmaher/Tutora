@@ -20,7 +20,6 @@
         android:background="#00FFFFFF"
         android:src="@drawable/account"
         app:layout_constraintStart_toStartOf="parent"
-        android:onClick="show"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
