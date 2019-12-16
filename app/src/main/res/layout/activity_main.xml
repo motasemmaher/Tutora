@@ -4,6 +4,72 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".models.MainActivity">
+    android:background="#E2E2E2"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="59dp"
+        android:background="#1DFAD2"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/menu"
+            android:layout_width="86dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/menu" />
+
+        <ImageView
+            android:id="@+id/imageView8"
+            android:layout_width="236dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="3dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/tutoralogo" />
+
+        <ImageView
+            android:id="@+id/imageView9"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center|center_horizontal|center_vertical"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="3dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_search_black_24dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/fragmen"
+        android:layout_width="411dp"
+        android:layout_height="668dp"
+        android:layout_margin="3dp"
+        android:layout_marginTop="32dp"
+        android:background="#E9FFFFFF"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header">
+
+    </LinearLayout>
+
+    <fragment
+        android:id="@+id/sidemenu"
+        android:name="com.example.tutora.sideMenu"
+        android:layout_width="253dp"
+        android:layout_height="736dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout="@layout/fragment_side_menu" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

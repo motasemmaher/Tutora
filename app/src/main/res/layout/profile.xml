@@ -18,7 +18,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginRight="16dp">
 
 
         <de.hdodenhof.circleimageview.CircleImageView
@@ -31,7 +32,8 @@
             app:civ_border_color="#00000000"
             app:civ_border_width="2dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="16dp" />
 
         <Button
             android:id="@+id/btn_login"
@@ -42,7 +44,8 @@
             android:background="@drawable/edit_button"
             android:textColor="@android:color/background_light"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="312dp" />
 
         <TextView
             android:id="@+id/textView"
@@ -55,7 +58,8 @@
             android:textSize="18sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="124dp" />
 
         <View
             android:id="@+id/tt"
@@ -67,7 +71,8 @@
             android:layout_marginBottom="24dp"
             android:background="@drawable/rectangle"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginRight="48dp" />
 
         <TextView
             android:id="@+id/tv"
@@ -81,7 +86,8 @@
             android:text="TRANSPARENT (which represents the same thing as @android:color/transparent ) is equal to 0 . The hex representation "
             android:textAppearance="@style/holder_name"
             app:layout_constraintStart_toStartOf="@+id/tt"
-            app:layout_constraintTop_toTopOf="@+id/tt" />
+            app:layout_constraintTop_toTopOf="@+id/tt"
+            android:layout_marginLeft="12dp" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -95,7 +101,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2">
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2"
+        android:layout_marginRight="12dp">
 
 
         <View
@@ -108,7 +115,8 @@
             android:layout_marginBottom="132dp"
             android:background="@drawable/rectangle"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="32dp" />
 
         <TextView
             android:id="@+id/holder_name"
@@ -122,7 +130,8 @@
             android:text="holder_name"
             android:textAppearance="@style/holder_name"
             app:layout_constraintStart_toStartOf="@+id/rectangle_6"
-            app:layout_constraintTop_toTopOf="@+id/rectangle_6" />
+            app:layout_constraintTop_toTopOf="@+id/rectangle_6"
+            android:layout_marginLeft="100dp" />
 
         <TextView
             android:id="@+id/some_id"
@@ -136,7 +145,8 @@
             android:text="************999"
             android:textAppearance="@style/some_id"
             app:layout_constraintBottom_toBottomOf="@+id/holder_name"
-            app:layout_constraintEnd_toEndOf="@+id/rectangle_6" />
+            app:layout_constraintEnd_toEndOf="@+id/rectangle_6"
+            android:layout_marginRight="108dp" />
 
 
         <TextView
@@ -151,7 +161,8 @@
             android:text="22/9"
             android:textAppearance="@style/some_id"
             app:layout_constraintBottom_toBottomOf="@+id/holder_name"
-            app:layout_constraintEnd_toEndOf="@+id/rectangle_6" />
+            app:layout_constraintEnd_toEndOf="@+id/rectangle_6"
+            android:layout_marginRight="12dp" />
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/mm"
@@ -162,7 +173,8 @@
             app:civ_border_color="#00000000"
             app:civ_border_width="2dp"
             app:layout_constraintBottom_toBottomOf="@+id/rectangle_6"
-            app:layout_constraintStart_toStartOf="@+id/rectangle_6" />
+            app:layout_constraintStart_toStartOf="@+id/rectangle_6"
+            android:layout_marginLeft="16dp" />
 
         <View
             android:id="@+id/plus"
@@ -174,7 +186,8 @@
             android:layout_marginBottom="40dp"
             android:background="@drawable/rectangle"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="32dp" />
 
         <Button
             android:id="@+id/pp"
@@ -185,7 +198,8 @@
             android:background="@drawable/add_button"
             android:textColor="@android:color/background_light"
             app:layout_constraintBottom_toBottomOf="@+id/plus"
-            app:layout_constraintStart_toStartOf="@+id/plus" />
+            app:layout_constraintStart_toStartOf="@+id/plus"
+            android:layout_marginLeft="144dp" />
 
         <TextView
             android:id="@+id/pay"
@@ -198,7 +212,8 @@
             android:textSize="18sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="16dp" />
     </androidx.constraintlayout.widget.ConstraintLayout>
     <![CDATA[
 

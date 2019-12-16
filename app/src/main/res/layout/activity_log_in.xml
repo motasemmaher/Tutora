@@ -23,8 +23,8 @@
             android:layout_marginRight="15dp"
             android:layout_marginBottom="15dp"
             android:scaleType="centerInside"
-            tools:src="@tools:sample/backgrounds/scenic[0]"
-            tools:srcCompat="@drawable/tutoraLogo" />
+            android:src="@drawable/tutoralogo"
+            />
 
         <TextView
             android:id="@+id/textView"
@@ -60,7 +60,7 @@
         android:typeface="monospace" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/c"
         android:layout_width="307dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"

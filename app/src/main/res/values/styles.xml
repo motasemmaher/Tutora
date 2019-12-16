@@ -7,6 +7,7 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
+
     <style name="holder_name">
 
         <item name="android:textSize">
@@ -18,6 +19,7 @@
         </item>
 
     </style>
+
     <style name="some_id">
 
         <item name="android:textSize">
@@ -28,6 +30,18 @@
             #000000
         </item>
 
+    </style>
+
+    <style name="NoActionBar" parent="Theme.Design.Light.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+    <style name="Toolbar.TitleText" parent="TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textSize">24dp</item>
     </style>
 
 </resources>
