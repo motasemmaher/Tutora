@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#E0E0E0"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/team"
+            android:layout_width="155dp"
+            android:layout_height="36dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="240dp"
+            android:layout_marginRight="240dp"
+            android:gravity="top"
+            android:text="Team"
+            android:textColor="#000000"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout_O"
+            android:layout_width="375dp"
+            android:layout_height="104dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/rounded_corner"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout_mP">
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profile_imageR"
+                android:layout_width="109dp"
+                android:layout_height="101dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:background="#333333"
+                android:src="@drawable/rashaideh"
+                app:civ_border_color="#00000000"
+                app:civ_border_width="2dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/textViewR"
+                android:layout_width="188dp"
+                android:layout_height="44dp"
+                android:layout_marginEnd="48dp"
+                android:layout_marginRight="48dp"
+                android:layout_marginBottom="56dp"
+                android:text="Mohammad Rashaideh"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <TextView
+                android:id="@+id/textView2MM"
+                android:layout_width="146dp"
+                android:layout_height="23dp"
+                android:layout_marginEnd="92dp"
+                android:layout_marginRight="92dp"
+                android:layout_marginBottom="16dp"
+                android:text="Mohammad Rashaideh"
+                android:textColor="#000000"
+                android:textSize="10sp"
+                android:textStyle="italic"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayoutsss"
+            android:layout_width="375dp"
+            android:layout_height="104dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/rounded_corner"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout_mO">
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profile_imageM"
+                android:layout_width="109dp"
+                android:layout_height="101dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:background="#333333"
+                android:src="@drawable/motasem"
+                app:civ_border_color="#00000000"
+                app:civ_border_width="2dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/textView_m"
+                android:layout_width="140dp"
+                android:layout_height="36dp"
+                android:layout_marginEnd="96dp"
+                android:layout_marginRight="96dp"
+                android:layout_marginBottom="52dp"
+                android:text="Mo'tasem Maher"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <TextView
+                android:id="@+id/textViewM"
+                android:layout_width="146dp"
+                android:layout_height="23dp"
+                android:layout_marginEnd="92dp"
+                android:layout_marginRight="92dp"
+                android:layout_marginBottom="16dp"
+                android:text="motasemmaher3@gmail.com"
+                android:textColor="#000000"
+                android:textSize="10sp"
+                android:textStyle="italic"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout_mO"
+            android:layout_width="375dp"
+            android:layout_height="104dp"
+            android:layout_marginTop="36dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/rounded_corner"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/team">
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profile_imageO"
+                android:layout_width="109dp"
+                android:layout_height="101dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:background="#333333"
+                android:src="@drawable/osama"
+                app:civ_border_color="#00000000"
+                app:civ_border_width="2dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/textViewOI"
+                android:layout_width="140dp"
+                android:layout_height="36dp"
+                android:layout_marginEnd="96dp"
+                android:layout_marginRight="96dp"
+                android:layout_marginBottom="52dp"
+                android:text="Osama Alzoubi"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="146dp"
+                android:layout_height="23dp"
+                android:layout_marginEnd="92dp"
+                android:layout_marginRight="92dp"
+                android:layout_marginBottom="16dp"
+                android:text="osalzoubi@gmail.com"
+                android:textColor="#000000"
+                android:textSize="10sp"
+                android:textStyle="italic"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout_mP"
+            android:layout_width="375dp"
+            android:layout_height="104dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/rounded_corner"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayoutsss">
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profile_imageG"
+                android:layout_width="109dp"
+                android:layout_height="101dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:background="#333333"
+                android:src="@drawable/ghaith"
+                app:civ_border_color="#00000000"
+                app:civ_border_width="2dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="140dp"
+                android:layout_height="36dp"
+                android:layout_marginEnd="96dp"
+                android:layout_marginRight="96dp"
+                android:layout_marginBottom="52dp"
+                android:text="Ghaith dalahmeh"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <TextView
+                android:id="@+id/textView2G"
+                android:layout_width="146dp"
+                android:layout_height="23dp"
+                android:layout_marginEnd="92dp"
+                android:layout_marginRight="92dp"
+                android:layout_marginBottom="16dp"
+                android:text="ghaithsuleiman04@gmail.com"
+                android:textColor="#000000"
+                android:textSize="10sp"
+                android:textStyle="italic"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.tutora.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_my_courses"
+        android:name="com.example.tutora.ui.mycourses.MyCourses"
+        android:label="@string/menu_my_courses"
+        tools:layout="@layout/fragment_my_courses" />
+
+    <fragment
+        android:id="@+id/nav_category"
+        android:name="com.example.tutora.ui.category.Category"
+        android:label="@string/menu_category"
+        tools:layout="@layout/fragment_category" />
+
+    <fragment
+        android:id="@+id/nav_watch_later"
+        android:name="com.example.tutora.ui.watchlater.WatchLater"
+        android:label="@string/menu_watchlater"
+        tools:layout="@layout/fragment_watch_later" />
+
+    <fragment
+        android:id="@+id/nav_setting"
+        android:name="com.example.tutora.ui.setting.Setting"
+        android:label="@string/menu_setting"
+        tools:layout="@layout/fragment_setting" />
+
+    <fragment
+        android:id="@+id/nav_about_us"
+        android:name="com.example.tutora.ui.about.AboutUs"
+        android:label="@string/menu_about"
+        tools:layout="@layout/fragment_about" />
+    <fragment
+        android:id="@+id/nav_profile"
+        android:name="com.example.tutora.ui.profile.fragment_profile"
+        android:label="@string/menu_profile"
+        tools:layout="@layout/profile" />
+</navigation>
