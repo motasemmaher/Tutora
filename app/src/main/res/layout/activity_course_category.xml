@@ -5,19 +5,4 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".CourseCategory">
-
-    <TextView
-        android:padding="5dp"
-        android:id="@+id/categoryNameTV"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Category_Name"
-        android:textColor="@android:color/primary_text_light"
-        android:textSize="24sp" />
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:layout_width="match_parent"
-        android:layout_height="690dp" />
-
-</LinearLayout>
+    tools:context=".CourseCategory"/>
