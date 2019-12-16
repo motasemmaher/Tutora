@@ -15,7 +15,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.tutora.CourseInfo;
 import com.example.tutora.R;
 import com.example.tutora.models.sampledata.Course;
-import com.example.tutora.ui.mycourses.CourseAdapter;
 
 import java.util.ArrayList;
 
