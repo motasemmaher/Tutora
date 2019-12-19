@@ -1,4 +1,4 @@
-package com.example.tutora.ui.mycourses;
+package com.example.tutora.ui.category;
 
 import android.view.LayoutInflater;
 import android.view.View;
