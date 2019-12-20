@@ -52,7 +52,12 @@ public class EnrolledCourseAdapter extends RecyclerView.Adapter<EnrolledCourseAd
         }
         holder.image.setImageResource(data.get(position).img);
         holder.progress.setProgress(data.get(position).progress);
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
+            }
+        });
         //holder.trash.setOnClickListener();
     }
 

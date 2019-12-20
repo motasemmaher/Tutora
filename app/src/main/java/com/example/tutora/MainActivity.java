@@ -21,8 +21,7 @@ public class MainActivity extends AppCompatActivity{
 
     private AppBarConfiguration mAppBarConfiguration;
     String id;
-    Login login = new Login(getApplicationContext());
-
+    Login login;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,6 +32,8 @@ public class MainActivity extends AppCompatActivity{
         NavigationView navigationView = findViewById(R.id.nav_view);
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
+         login= new Login(getApplicationContext());
+
         id = login.getusername();
         mAppBarConfiguration = new AppBarConfiguration.Builder(
                 R.id.nav_profile, R.id.nav_home, R.id.nav_my_courses, R.id.nav_category,
