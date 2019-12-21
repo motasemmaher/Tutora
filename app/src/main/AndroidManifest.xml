@@ -9,10 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Design.Light.NoActionBar">
+        <activity android:name=".ui.course.cou"></activity>
         <activity
             android:name=".MainActivity"
             android:label="@string/title_activity_main2"
-            android:theme="@style/NoActionBar"></activity>
+            android:theme="@style/NoActionBar" />
         <activity android:name=".Signup" />
         <activity android:name=".login" />
         <activity android:name=".landing">

@@ -39,7 +39,7 @@ public class lessonadapter extends RecyclerView.Adapter<lessonadapter.lessonView
 
     @Override
     public int getItemCount() {
-        return 0;
+        return data.size();
     }
     public static class lessonView extends RecyclerView.ViewHolder{
         ImageView image;

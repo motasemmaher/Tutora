@@ -1,6 +1,6 @@
 package com.example.tutora.ui.mycourses;
 
-import android.database.Cursor;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -8,16 +8,13 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
-import android.widget.Toast;
-
 import androidx.annotation.NonNull;
 import androidx.fragment.app.FragmentActivity;
 import androidx.recyclerview.widget.RecyclerView;
-
 import com.example.tutora.EnrolledCourseInfo;
 import com.example.tutora.R;
-import com.example.tutora.models.sampledata.Lesson;
-import com.example.tutora.ui.course.course;
+import com.example.tutora.ui.course.cou;
+//import com.example.tutora.ui.course.course;
 
 import java.util.ArrayList;
 
@@ -90,9 +87,10 @@ public class EnrolledCourseAdapter extends RecyclerView.Adapter<EnrolledCourseAd
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-
-
-                    ((FragmentActivity) v.getContext()).getSupportFragmentManager().beginTransaction().add(R.id.nav_host_fragment,new course(po)).commit();
+                 //   cou co = new cou(po);
+                    Intent intent = new Intent(itemView.getContext(),cou.class);
+                    itemView.getContext().startActivity(intent);
+                //    ((FragmentActivity) v.getContext()).getSupportFragmentManager().beginTransaction().add(R.id.nav_host_fragment,new course(po)).commit();
                 }
             });
         }
