@@ -1,5 +1,7 @@
 package com.example.tutora.ui.course;
 
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,6 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.tutora.R;
+import com.example.tutora.ui.lesson.LessonActivity;
 
 import java.util.ArrayList;
 
@@ -46,12 +49,20 @@ public class lessonadapter extends RecyclerView.Adapter<lessonadapter.lessonView
         TextView name;
         TextView time;
         ImageView seen;
-        public lessonView(View itemView) {
+        public lessonView(final View itemView) {
             super(itemView);
             image = (ImageView) itemView.findViewById(R.id.lessonCardImg);
             name = (TextView) itemView.findViewById(R.id.lessonNameTV);
             time = (TextView) itemView.findViewById(R.id.estimatedLessonTimeTV);
             seen = (ImageView) itemView.findViewById(R.id.lessonCompleteCheck);
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    Intent int1 = new Intent(itemView.getContext(), LessonActivity.class);
+                    itemView.getContext().startActivity(int1);
+                }
+            });
         }
+
     }
 }

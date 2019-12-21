@@ -1,6 +1,8 @@
 package com.example.tutora.ui.mycourses;
 
 import android.content.Intent;
+import android.content.Intent;
+import android.database.Cursor;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,6 +17,8 @@ import com.example.tutora.EnrolledCourseInfo;
 import com.example.tutora.R;
 import com.example.tutora.ui.course.cou;
 //import com.example.tutora.ui.course.course;
+import com.example.tutora.models.sampledata.Lesson;
+import com.example.tutora.ui.lesson.LessonActivity;
 
 import java.util.ArrayList;
 
