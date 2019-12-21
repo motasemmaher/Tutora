@@ -8,8 +8,11 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.ImageView;
 
 import com.example.tutora.models.sampledata.Course;
+import com.example.tutora.ui.course.cou;
 import com.example.tutora.ui.mycourses.EnrolledCourseAdapter;
 
 import java.util.ArrayList;
@@ -38,5 +41,13 @@ public class search extends AppCompatActivity {
         }
         adapter = new EnrolledCourseAdapter(list);
         RV.setAdapter(adapter);
+        ImageView back =findViewById(R.id.backAc);
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), cou.class);
+                startActivity(intent);
+            }
+        });
     }
 }

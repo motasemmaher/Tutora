@@ -25,9 +25,8 @@ public class CourseEnrolled extends database {
 
     public boolean delete(int id){
         SQLiteDatabase database = this.getWritableDatabase();
-        if(database.delete("CourseEnrolled","id",new String[]{""+id}) != -1){
-            return  true;
-        }
+
+        database.execSQL("delete from CourseEnrolled where courseId = "+id);
         return false;
     }
 

@@ -1,5 +1,6 @@
 package com.example.tutora.ui.mycourses;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.Intent;
 import android.database.Cursor;
@@ -13,9 +14,11 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.FragmentActivity;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.RecyclerView;
 import com.example.tutora.EnrolledCourseInfo;
 import com.example.tutora.R;
+import com.example.tutora.models.sampledata.CourseEnrolled;
 import com.example.tutora.ui.course.cou;
 //import com.example.tutora.ui.course.course;
 import com.example.tutora.models.sampledata.Lesson;
@@ -104,9 +107,18 @@ public class EnrolledCourseAdapter extends RecyclerView.Adapter<EnrolledCourseAd
                     AlertDialog.Builder alert = new AlertDialog.Builder(v.getContext());
                     alert.setTitle("Course Deletion");
                     alert.setMessage("Are you sure you want to remove this course?");
-                    alert.setPositiveButton("Yes", null);
+                    alert.setPositiveButton("Yes", new AlertDialog.OnClickListener(){
+
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            CourseEnrolled courseEnrolled = new CourseEnrolled(itemView.getContext());
+                            courseEnrolled.delete(1);
+                                                   }
+
+                    });
                     alert.setNegativeButton("No", null);
                     alert.show();
+
                 }
             });
         }
