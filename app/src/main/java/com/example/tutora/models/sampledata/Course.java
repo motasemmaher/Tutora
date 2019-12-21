@@ -38,4 +38,11 @@ public class Course extends database {
         return cursor;
     }
 
+    public Cursor get(String name){
+        SQLiteDatabase database= this.getReadableDatabase();
+        Cursor cursor = database.rawQuery("select * from Course where name = ?",new String[]{name});
+        cursor.moveToFirst();
+        return cursor;
+    }
+
 }

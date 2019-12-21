@@ -3,8 +3,11 @@ package com.example.tutora;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
-import com.*;
-import androidx.annotation.NonNull;
+import android.view.View;
+import android.widget.EditText;
+import android.widget.ImageView;
+
+
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
@@ -48,7 +51,17 @@ public class MainActivity extends AppCompatActivity{
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
 
-
+        final ImageView searc = findViewById(R.id.search);
+        searc.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                EditText sear;
+                sear = v.findViewById(R.id.txsearch);
+                Intent intent = new Intent(getApplicationContext(),search.class);
+                intent.putExtra("key","Java");
+                v.getContext().startActivity(intent);
+            }
+        });
     }
 
 

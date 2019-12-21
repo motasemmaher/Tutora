@@ -14,6 +14,7 @@
         android:theme="@style/AppBarOverlay">
 
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/per"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
@@ -29,7 +30,7 @@
                 app:popupTheme="@style/PopupOverlay" />
 
             <ImageButton
-                android:id="@+id/imageButton4"
+                android:id="@+id/search"
                 android:layout_width="46dp"
                 android:layout_height="38dp"
                 android:background="#00FFFFFF"
@@ -38,6 +39,21 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/toolbar"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/txsearch"
+                android:layout_width="162dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="7dp"
+                android:layout_marginRight="7dp"
+                android:autoText="true"
+                android:ems="10"
+                android:hint="@android:string/search_go"
+                android:inputType="textPersonName"
+                android:selectAllOnFocus="false"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/search"
                 app:layout_constraintTop_toTopOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>

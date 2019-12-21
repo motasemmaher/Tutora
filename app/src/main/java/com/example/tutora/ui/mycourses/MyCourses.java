@@ -40,7 +40,7 @@ public class MyCourses extends Fragment {
         RV.setLayoutManager(layoutManager);
 
 
-        ArrayList<EnrolledCourseInfo> list = new ArrayList<>();
+            ArrayList<EnrolledCourseInfo> list = new ArrayList<>();
 
 
         Course course = new Course(view.getContext());
