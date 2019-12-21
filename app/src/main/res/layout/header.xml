@@ -27,6 +27,7 @@
         android:id="@+id/textsearch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:cursorVisible="false"
         android:ems="10"
         android:hint="Search"
         android:inputType="textPersonName"
