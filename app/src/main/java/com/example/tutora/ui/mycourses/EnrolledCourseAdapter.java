@@ -11,6 +11,7 @@ import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.FragmentActivity;
 import androidx.recyclerview.widget.RecyclerView;
 import com.example.tutora.EnrolledCourseInfo;
@@ -95,6 +96,17 @@ public class EnrolledCourseAdapter extends RecyclerView.Adapter<EnrolledCourseAd
                     Intent intent = new Intent(itemView.getContext(),cou.class);
                     itemView.getContext().startActivity(intent);
                 //    ((FragmentActivity) v.getContext()).getSupportFragmentManager().beginTransaction().add(R.id.nav_host_fragment,new course(po)).commit();
+                }
+            });
+            trash.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    AlertDialog.Builder alert = new AlertDialog.Builder(v.getContext());
+                    alert.setTitle("Course Deletion");
+                    alert.setMessage("Are you sure you want to remove this course?");
+                    alert.setPositiveButton("Yes", null);
+                    alert.setNegativeButton("No", null);
+                    alert.show();
                 }
             });
         }

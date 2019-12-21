@@ -49,7 +49,6 @@ public class CourseAdapter extends RecyclerView.Adapter<CourseAdapter.CourseView
             holder.star5.setImageResource(R.drawable.star_colored);
         }
         holder.image.setImageResource(data.get(position).img);
-        //holder.
     }
 
     @Override
@@ -76,6 +75,7 @@ public class CourseAdapter extends RecyclerView.Adapter<CourseAdapter.CourseView
             this.star4 = (ImageView) itemView.findViewById(R.id.star4);
             this.star5 = (ImageView) itemView.findViewById(R.id.star5);
             this.image = (ImageView) itemView.findViewById(R.id.courseImage);
+
         }
     }
 }

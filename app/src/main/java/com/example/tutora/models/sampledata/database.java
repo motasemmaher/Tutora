@@ -8,6 +8,7 @@ import android.widget.Toast;
 
 import com.example.tutora.R;
 
+
 public class database extends SQLiteOpenHelper{
 
     public static final String DATABASE_NAME = "Tutor.db";
@@ -37,7 +38,7 @@ public class database extends SQLiteOpenHelper{
             content.put("description","The purpose of learning a programming language is to become a better programmer; that is, to become more effective at designing and implementing new systems and at maintaining old ones.");
             content.put("rate",3);
             content.put("price",100.00);
-            content.put("image",R.drawable.cpp_logo);
+            content.put("image", R.drawable.cpp_logo);
             db.insert("Course",null,content);
             content = new ContentValues();
             content.put("name","Jave");

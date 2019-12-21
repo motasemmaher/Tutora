@@ -2,8 +2,11 @@ package com.example.tutora.ui.lesson;
 import com.example.tutora.search;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.net.Uri;
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.MediaController;
+import android.widget.VideoView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,10 +20,22 @@ import com.example.tutora.ui.course.cou;
 
 public class LessonActivity extends AppCompatActivity {
 
+    private VideoView myVideoView;
+    private MediaController mediaControls;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lesson);
+
+        mediaControls = new MediaController(this);
+        mediaControls.setAnchorView(myVideoView);
+
+        myVideoView = (VideoView) findViewById(R.id.videoView);
+        myVideoView.setMediaController(mediaControls);
+        myVideoView.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.vid));
+
+        myVideoView.start();
         ImageView back =findViewById(R.id.backAc);
         back.setOnClickListener(new View.OnClickListener() {
             @Override

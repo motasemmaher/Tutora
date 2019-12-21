@@ -5,20 +5,35 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.lesson.LessonActivity">
+
     <include
         android:id="@+id/include"
         layout="@layout/header"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-
-    <VideoView
-        android:id="@+id/videoView"
-        android:layout_width="match_parent"
-        android:layout_height="230dp"
+        android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/include" />
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <FrameLayout
+        android:id="@+id/frameL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/include">
+
+        <VideoView
+            android:id="@+id/videoView"
+            android:layout_width="match_parent"
+            android:layout_height="230dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/include" />
+    </FrameLayout>
+
+
 
     <ScrollView
         android:layout_width="407dp"
@@ -26,7 +41,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/videoView">
+        app:layout_constraintTop_toBottomOf="@+id/frameL">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -241,8 +256,8 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:ems="12"
-                        android:inputType="textPersonName"
-                        android:text="Name" />
+                        android:hint="Answer"
+                        android:inputType="textPersonName" />
 
                     <Button
                         android:id="@+id/button2"

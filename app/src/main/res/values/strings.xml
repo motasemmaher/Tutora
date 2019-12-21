@@ -27,4 +27,5 @@
     <string name="menu_setting">Setting</string>
     <string name="menu_about">About Us</string>
     <string name="menu_profile">Profile</string>
+    <string name="quizEX"><![CDATA[What is the output of the following program?  int getFirstDigit(int value) { \t\treturn value/10; }  int getLastDigit(int value) { \t\treturn value % 10; }  int main(int argc, char *argv[]) { \t\tint x; \t\tint first; \t\tint second;  \t\tx = 42; \t\tfirst = getFirstDigit(x); \t\tsecond = getSecondDigit(x); \t\tcout << second; \t\tcout << first; }]]></string>
 </resources>
