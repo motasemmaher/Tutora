@@ -1,5 +1,6 @@
 package com.example.tutora.ui.mycourses;
 
+import android.database.Cursor;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -7,19 +8,22 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.fragment.app.FragmentActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.tutora.CourseInfo;
 import com.example.tutora.EnrolledCourseInfo;
 import com.example.tutora.R;
+import com.example.tutora.models.sampledata.Lesson;
+import com.example.tutora.ui.course.course;
 
 import java.util.ArrayList;
 
 public class EnrolledCourseAdapter extends RecyclerView.Adapter<EnrolledCourseAdapter.CourseViewHolder>{
     private ArrayList<EnrolledCourseInfo> data;
-
+    static int po;
     public EnrolledCourseAdapter(ArrayList<EnrolledCourseInfo> arr) {
         data = arr;
     }
@@ -32,8 +36,9 @@ public class EnrolledCourseAdapter extends RecyclerView.Adapter<EnrolledCourseAd
     }
 
     @Override
-    public void onBindViewHolder(@NonNull CourseViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull final CourseViewHolder holder, final int position) {
         holder.title.setText(data.get(position).title);
+        po = position;
         int rating = data.get(position).rating;
         if (rating >= 1) {
             holder.star1.setImageResource(R.drawable.star_colored);
@@ -52,12 +57,7 @@ public class EnrolledCourseAdapter extends RecyclerView.Adapter<EnrolledCourseAd
         }
         holder.image.setImageResource(data.get(position).img);
         holder.progress.setProgress(data.get(position).progress);
-        holder.itemView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
 
-            }
-        });
         //holder.trash.setOnClickListener();
     }
 
@@ -76,7 +76,7 @@ public class EnrolledCourseAdapter extends RecyclerView.Adapter<EnrolledCourseAd
         ImageView image;
         ProgressBar progress;
         ImageButton trash;
-        public CourseViewHolder(View itemView) {
+        public CourseViewHolder(final View itemView) {
             super(itemView);
             this.title = (TextView) itemView.findViewById(R.id.titleTV);
             this.star1 = (ImageView) itemView.findViewById(R.id.star1);
@@ -87,6 +87,14 @@ public class EnrolledCourseAdapter extends RecyclerView.Adapter<EnrolledCourseAd
             this.image = (ImageView) itemView.findViewById(R.id.courseImage);
             this.progress = (ProgressBar) itemView.findViewById(R.id.progressBar);
             this.trash = (ImageButton) itemView.findViewById(R.id.imageButton3);
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+
+                    ((FragmentActivity) v.getContext()).getSupportFragmentManager().beginTransaction().add(R.id.nav_host_fragment,new course(po)).commit();
+                }
+            });
         }
     }
 }

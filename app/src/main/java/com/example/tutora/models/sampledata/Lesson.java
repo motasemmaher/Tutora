@@ -33,7 +33,7 @@ public class Lesson  extends database {
 
     public Cursor getLessons(int id){
         SQLiteDatabase database = this.getReadableDatabase();
-        Cursor cursor = database.rawQuery("select * from Lesson where id = ?",new String[]{""+id});
+        Cursor cursor = database.rawQuery("select * from Lesson where courseId = ?",new String[]{""+id});
         cursor.moveToFirst();
         return cursor;
     }

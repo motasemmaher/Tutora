@@ -48,10 +48,10 @@ public class lessonadapter extends RecyclerView.Adapter<lessonadapter.lessonView
         ImageView seen;
         public lessonView(View itemView) {
             super(itemView);
-            image = itemView.findViewById(R.id.lessonCardImg);
-            name = itemView.findViewById(R.id.lessonNameTV);
-            time = itemView.findViewById(R.id.estimatedLessonTimeTV);
-            seen = itemView.findViewById(R.id.lessonCompleteCheck);
+            image = (ImageView) itemView.findViewById(R.id.lessonCardImg);
+            name = (TextView) itemView.findViewById(R.id.lessonNameTV);
+            time = (TextView) itemView.findViewById(R.id.estimatedLessonTimeTV);
+            seen = (ImageView) itemView.findViewById(R.id.lessonCompleteCheck);
         }
     }
 }

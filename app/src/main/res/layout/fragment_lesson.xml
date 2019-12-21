@@ -220,27 +220,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
                     android:layout_marginBottom="5dp"
-                    android:text="What is the output of the following
-program?\n\n
-int getFirstDigit(int value) {\n
-   return value/10;\n
-}\n
-\n
-int getLastDigit(int value) {\n
-  return value % 10;\n
-}\n
-\n
-int main(int argc, char *argv[]) {\n
-    int x;\n
-    int first;\n
-    int second;\n
-\n
-    x = 42;\n
-    first = getFirstDigit(x);\n
-    second = getSecondDigit(x);\n
-    cout << second;\n
-    cout << first;\n
-}"
+                    android:text=""
                     android:textColor="@android:color/secondary_text_light" />
 
                 <LinearLayout

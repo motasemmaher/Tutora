@@ -6,6 +6,7 @@ package com.example.tutora.ui.course;
         import android.view.LayoutInflater;
         import android.view.View;
         import android.view.ViewGroup;
+        import android.widget.Toast;
 
         import androidx.annotation.NonNull;
         import androidx.annotation.Nullable;
@@ -34,30 +35,34 @@ public class course extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         RecyclerView re = view.findViewById(R.id.re);
-        Lesson lesson = new Lesson(view.getContext());
+       // Lesson lesson = new Lesson(view.getContext());
 
          RecyclerView.Adapter adapter;
          RecyclerView.LayoutManager layoutManager;
-        layoutManager = new LinearLayoutManager(view.getContext());
+         layoutManager = new LinearLayoutManager(view.getContext());
+         re.setLayoutManager(layoutManager);
+
+
+        Lesson lesson = new Lesson(view.getContext());
 
         Cursor cursor = lesson.getLessons(id);
         ArrayList<com.example.tutora.ui.course.Lesson>lessons = new ArrayList<>();
-        //(id integer primary key autoincrement,name text,link text,courseId integer, time text, reference text,task text,image integer
         if(cursor.moveToFirst()){
-         boolean flag = true;
+            boolean flag = true;
             do{
                 if(flag){
                     flag = !flag;
-                    lessons.add(new com.example.tutora.ui.course.Lesson(cursor.getString(1),cursor.getString(5),cursor.getInt(8),true));
+                    lessons.add(new com.example.tutora.ui.course.Lesson(cursor.getString(1),cursor.getString(5),0,true));
                 }else {
-                    lessons.add(new com.example.tutora.ui.course.Lesson(cursor.getString(1),cursor.getString(5),cursor.getInt(8),false));
+                    lessons.add(new com.example.tutora.ui.course.Lesson(cursor.getString(1),cursor.getString(5),0,false));
 
                 }
-            }while (cursor.moveToNext());
+                Toast.makeText(view.getContext(),cursor.getString(1),Toast.LENGTH_LONG).show();
 
-            adapter = new lessonadapter(lessons);
-            re.setAdapter(adapter);
+            } while (cursor.moveToNext());
         }
 
+        adapter = new lessonadapter(lessons);
+        re.setAdapter(adapter);
     }
 }
