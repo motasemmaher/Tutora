@@ -16,17 +16,6 @@ public class database extends SQLiteOpenHelper{
         super(context,DATABASE_NAME,null,1);
         con = context;
     }
-    /*
-    *
-    *
-
-
-
-
-
-
-    *
-    * */
     @Override
     public void onCreate(SQLiteDatabase db) {
         try {

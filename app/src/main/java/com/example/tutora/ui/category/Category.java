@@ -2,6 +2,7 @@ package com.example.tutora.ui.category;
 
 import android.database.Cursor;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -42,7 +43,9 @@ public class Category extends Fragment {
         Cursor cur = course.getCategory("Programming");
         if (cur.moveToFirst()) {
             do {
-                CourseInfo ci = new CourseInfo(cur.getString(1), (float)cur.getDouble(4), cur.getInt(6), cur.getInt(5));
+                Log.i("info", cur.getString(1) + "--" + cur.getString(2) + "--" + cur.getString(3) + "--"
+                        + cur.getString(4) + "--" + cur.getString(5) + "--" + cur.getString(6) + "--");
+                CourseInfo ci = new CourseInfo(cur.getString(2), (float)cur.getDouble(5), cur.getInt(5), cur.getInt(6));
                 list.add(ci);
             } while (cur.moveToNext());
         }

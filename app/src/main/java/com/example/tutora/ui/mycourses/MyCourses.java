@@ -2,6 +2,7 @@ package com.example.tutora.ui.mycourses;
 
 import android.database.Cursor;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,14 +13,12 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.tutora.CourseInfo;
 import com.example.tutora.EnrolledCourseInfo;
 import com.example.tutora.R;
 import com.example.tutora.models.sampledata.Course;
 import com.example.tutora.models.sampledata.CourseEnrolled;
 
 import java.util.ArrayList;
-import java.util.HashSet;
 
 public class MyCourses extends Fragment {
 
@@ -56,7 +55,9 @@ public class MyCourses extends Fragment {
                     do {
                         int n2 = cur2.getInt(1);
                         if (n1 == n2) {
-                            list.add(new EnrolledCourseInfo(cur.getString(1), cur.getInt(6), cur.getInt(5)));
+                            Log.i("info", cur.getString(1) + "--" + cur.getString(2) + "--" + cur.getString(3) + "--"
+                                    + cur.getString(4) + "--" + cur.getString(5) + "--" + cur.getString(6) + "--");
+                            list.add(new EnrolledCourseInfo(cur.getString(2), cur.getInt(6), cur.getInt(6)));
                         }
                     } while (cur2.moveToNext());
                 }
