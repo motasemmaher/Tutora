@@ -56,7 +56,7 @@ public class WatchLater extends Fragment {
         RV = view.findViewById(R.id.zxc);
         layoutManager = new LinearLayoutManager(view.getContext());
         RV.setLayoutManager(layoutManager);
-//nice
+
         btnLesson.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
